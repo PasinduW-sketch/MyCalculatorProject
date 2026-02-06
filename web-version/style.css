@@ -1,0 +1,84 @@
+:root {
+    --primary: #38bdf8; /* Cyber Blue */
+    --danger: #f43f5e; /* Rose Red */
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background: #020617;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow-bg {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.15), transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.app-shell {
+    display: flex;
+    width: 1000px;
+    height: 650px;
+    background: var(--glass);
+    backdrop-filter: blur(25px);
+    border: 1px solid var(--border);
+    border-radius: 40px;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 280px;
+    background: rgba(0,0,0,0.4);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+}
+
+.profile { text-align: center; margin-bottom: 50px; }
+.avatar { 
+    width: 70px; height: 70px; background: var(--primary); 
+    border-radius: 20px; margin: 0 auto 15px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Orbitron', sans-serif; font-weight: bold; font-size: 24px; color: #020617;
+}
+
+.nav-item {
+    background: transparent; border: none; color: #94a3b8;
+    padding: 15px 20px; text-align: left; font-size: 16px;
+    cursor: pointer; border-radius: 15px; transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+.nav-item.active { background: rgba(56, 189, 248, 0.1); color: var(--primary); font-weight: bold; }
+
+/* Display & Keys */
+.glass-card { flex-grow: 1; padding: 40px; }
+#display {
+    width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--border);
+    border-radius: 20px; color: var(--primary); font-family: 'Orbitron', sans-serif;
+    font-size: 32px; text-align: right; padding: 25px; box-sizing: border-box;
+}
+
+.keypad { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 30px; }
+button {
+    height: 65px; border-radius: 18px; border: none; font-size: 18px;
+    background: rgba(255,255,255,0.05); color: white; cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+.btn-sci { color: var(--primary); font-weight: bold; }
+.btn-eq { background: var(--primary); color: #020617; font-weight: bold; }
+.btn-danger { background: rgba(244, 63, 94, 0.15); color: var(--danger); }

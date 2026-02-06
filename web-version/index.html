@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHW Research Suite | Pasindu Harsha Wanniarachchi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="avatar">PHW</div>
+                <h3>Pasindu Harsha</h3>
+                <p>KDU ENTC ENGINEER</p>
+            </div>
+            <nav>
+                <button class="nav-item active" onclick="showTab('eng')">Engineering Core</button>
+                <button class="nav-item" onclick="showTab('uni')">Universal Hub</button>
+                <button class="nav-item" onclick="showTab('bio')">Bio-Analytics</button>
+            </nav>
+            <div class="sidebar-footer">v2.0 Research Grade</div>
+        </aside>
+
+        <main class="glass-card">
+            <div id="eng-tab" class="tab-pane active">
+                <div class="display-container">
+                    <div class="status">SYSTEM ACTIVE</div>
+                    <input type="text" id="display" placeholder="0" readonly>
+                </div>
+                <div class="keypad">
+                    <button onclick="append('Math.sin(')" class="btn-sci">sin</button>
+                    <button onclick="append('Math.cos(')" class="btn-sci">cos</button>
+                    <button onclick="append('Math.log10(')" class="btn-sci">log</button>
+                    <button onclick="clearAll()" class="btn-danger">AC</button>
+                    
+                    <button onclick="append('7')">7</button>
+                    <button onclick="append('8')">8</button>
+                    <button onclick="append('9')">9</button>
+                    <button onclick="append('/')" class="btn-op">÷</button>
+                    
+                    <button onclick="append('4')">4</button>
+                    <button onclick="append('5')">5</button>
+                    <button onclick="append('6')">6</button>
+                    <button onclick="append('*')" class="btn-op">×</button>
+                    
+                    <button onclick="append('1')">1</button>
+                    <button onclick="append('2')">2</button>
+                    <button onclick="append('3')">3</button>
+                    <button onclick="append('+')" class="btn-op">+</button>
+                    
+                    <button onclick="append('0')" class="btn-zero">0</button>
+                    <button onclick="append('.')" class="btn-dot">.</button>
+                    <button onclick="calculate()" class="btn-eq">=</button>
+                </div>
+            </div>
+
+            <div id="uni-tab" class="tab-pane">
+                <h2 class="section-title">Universal Converter Hub</h2>
+                <div class="form-group">
+                    <input type="number" id="unitIn" placeholder="Enter Scientific Value">
+                    <select id="unitSelect">
+                        <option value="c-k">Thermal: Celsius to Kelvin</option>
+                        <option value="mps-kmh">Motion: m/s to km/h</option>
+                        <option value="psi-bar">Pressure: PSI to Bar</option>
+                    </select>
+                    <button onclick="runConvert()" class="btn-action">EXECUTE CONVERSION</button>
+                </div>
+                <div class="output-box" id="uniOut">READY FOR DATA...</div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
