@@ -14,3 +14,5 @@ This suite is designed for "Analytical Engineering and Data Visualization," movi
 ## 🛠 Tech Stack
 - **Frontend**: HTML5, CSS3 (Glassmorphism), JavaScript
 - **Backend**: Java Swing (Object-Oriented Architecture)
+
+- https://6998f7616823f900b44df0f0--golden-boba-72a5ad.netlify.app/
